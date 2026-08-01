@@ -1,0 +1,4 @@
+# NUNCA subir claves al repo: van en Settings -> Secrets -> Actions
+config_testnet.json
+__pycache__/
+*.pyc

@@ -1,0 +1,43 @@
+name: bot-testnet-4h
+
+on:
+  schedule:
+    # 2 minutos despues de cada cierre de vela 4H (UTC). GitHub puede
+    # demorar el arranque unos minutos mas; para velas de 4H es irrelevante.
+    - cron: "2 0,4,8,12,16,20 * * *"
+  workflow_dispatch: {}   # boton para ejecutarlo a mano y probar
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bot
+  cancel-in-progress: false
+
+jobs:
+  ciclo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencias
+        run: pip install --quiet -r requirements.txt
+
+      - name: Ciclo del bot
+        env:
+          BINANCE_TESTNET_KEY: ${{ secrets.BINANCE_TESTNET_KEY }}
+          BINANCE_TESTNET_SECRET: ${{ secrets.BINANCE_TESTNET_SECRET }}
+        run: python bot_paper.py --once
+
+      - name: Guardar estado y logs en el repo
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A -- state_paper.json bot_log.txt trades_paper.csv || true
+          git diff --cached --quiet || git commit -m "ciclo $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
