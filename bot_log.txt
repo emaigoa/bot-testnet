@@ -46,3 +46,7 @@
 [2026-08-03 21:09:45 UTC] Reloj sincronizado con Binance (desfase local: -80 ms)
 [2026-08-03 21:09:47 UTC] Aviso: usando datos spot (espejo binance.vision) por bloqueo regional de fapi.
 [2026-08-03 21:09:47 UTC] TESTNET equity=5000.00 | close=1870.20 ema21=1868.73 ema89=1877.37 rsi=49.4 atr=24.41 volOk=True | señal=None
+[2026-08-04 03:13:01 UTC] Bot iniciado — ETHUSDT 4h — modo: TESTNET (ordenes reales con dinero ficticio)
+[2026-08-04 03:13:01 UTC] Reloj sincronizado con Binance (desfase local: -72 ms)
+[2026-08-04 03:13:03 UTC] Aviso: usando datos spot (espejo binance.vision) por bloqueo regional de fapi.
+[2026-08-04 03:13:03 UTC] TESTNET equity=5000.00 | close=1860.50 ema21=1867.99 ema89=1876.99 rsi=46.7 atr=24.35 volOk=True | señal=None
