@@ -545,3 +545,6 @@
 [2026-09-01 19:18:14 UTC] Bot iniciado — ETHUSDT 4h — modo: TESTNET (ordenes reales con dinero ficticio)
 [2026-09-01 19:18:15 UTC] Reloj sincronizado con Binance (desfase local: -80 ms)
 [2026-09-01 19:18:15 UTC] TESTNET: posicion abierta +1.044 ETH @ 1907.97 — los brackets del exchange la manejan.
+[2026-09-01 22:29:49 UTC] Bot iniciado — ETHUSDT 4h — modo: TESTNET (ordenes reales con dinero ficticio)
+[2026-09-01 22:29:49 UTC] Reloj sincronizado con Binance (desfase local: -75 ms)
+[2026-09-01 22:29:49 UTC] TESTNET: posicion abierta +1.044 ETH @ 1907.97 — los brackets del exchange la manejan.
